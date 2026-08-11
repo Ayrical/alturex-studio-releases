@@ -3,6 +3,11 @@
 Official installers and the auto-update feed for **Alturex Planner**, a local-first RF link and
 network topology planner.
 
+This repository hosts the official Alturex Planner downloads and the update feed the installed
+app checks for new versions. For the latest build with per-platform install instructions, see the
+[downloads page](https://ayrical.github.io/alturex-planner-releases/), or browse every published
+version on the [Releases tab](https://github.com/Ayrical/alturex-planner-releases/releases).
+
 This repository contains **binaries only**. Alturex Planner is proprietary software; the source
 code is developed in a private repository and is not available here. Issues and pull requests in
 this repository are not monitored — contact Alturex through your normal support channel.
