@@ -668,15 +668,17 @@
     // Linux
     html += '<article class="os-card">';
     html += "<h3>" + osIcon("linux") + "Linux</h3>";
-    html += '<p class="os-sub">x64 · AppImage, .deb, or .rpm</p>';
+    html += '<p class="os-sub">x64 · .deb, .rpm, or AppImage</p>';
     html += '<div class="dl-buttons">' +
-      dlButton(groups.linuxAppImage, "Download .AppImage", "Runs on most distros", true) +
-      dlButton(groups.linuxDeb, "Download .deb", "Debian / Ubuntu", false) +
+      dlButton(groups.linuxDeb, "Download .deb", "Ubuntu / Debian · recommended", true) +
       dlButton(groups.linuxRpm, "Download .rpm", "Fedora / RHEL", false) +
+      dlButton(groups.linuxAppImage, "Download .AppImage", "Other distros · no install", false) +
       "</div>";
     html += '<ol class="steps">' +
-      "<li>AppImage: <code>chmod +x Alturex*.AppImage</code>, then run it.</li>" +
-      "<li>Or install the <code>.deb</code>/<code>.rpm</code> with your system's package manager — pick one format and stick with it.</li>" +
+      "<li><strong>Ubuntu / Debian:</strong> double-clicking a <code>.deb</code> usually opens an archive viewer, so install it from a terminal: " +
+        "<code>sudo apt install ./" + escapeHtml(groups.linuxDeb ? groups.linuxDeb.name : "Alturex.Studio_<version>_amd64.deb") + "</code> (run from your Downloads folder), then launch <strong>Alturex Studio</strong> from the app grid.</li>" +
+      "<li><strong>Fedora / RHEL:</strong> <code>sudo dnf install ./" + escapeHtml(groups.linuxRpm ? groups.linuxRpm.name : "Alturex.Studio-<version>.x86_64.rpm") + "</code>.</li>" +
+      "<li><strong>AppImage:</strong> it will not run by double-click until it is executable — right-click → Properties → <em>Executable as Program</em> (or <code>chmod +x Alturex*.AppImage</code>), then run it. It will not appear in your app grid. In-app updates work for the AppImage; <code>.deb</code>/<code>.rpm</code> installs update by downloading the next version from this page — pick one format and stick with it.</li>" +
       "</ol>";
     html += "</article>";
 
