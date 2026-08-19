@@ -1,14 +1,14 @@
-# Alturex Planner — Downloads
+# Alturex Studio — Downloads
 
-Official installers and the auto-update feed for **Alturex Planner**, a local-first RF link and
+Official installers and the auto-update feed for **Alturex Studio**, a local-first RF link and
 network topology planner.
 
-This repository hosts the official Alturex Planner downloads and the update feed the installed
+This repository hosts the official Alturex Studio downloads and the update feed the installed
 app checks for new versions. For the latest build with per-platform install instructions, see the
-[downloads page](https://ayrical.github.io/alturex-planner-releases/), or browse every published
-version on the [Releases tab](https://github.com/Ayrical/alturex-planner-releases/releases).
+[downloads page](https://ayrical.github.io/alturex-studio-releases/), or browse every published
+version on the [Releases tab](https://github.com/Ayrical/alturex-studio-releases/releases).
 
-This repository contains **binaries only**. Alturex Planner is proprietary software; the source
+This repository contains **binaries only**. Alturex Studio is proprietary software; the source
 code is developed in a private repository and is not available here. Issues and pull requests in
 this repository are not monitored — contact Alturex through your normal support channel.
 
@@ -35,7 +35,7 @@ checksum of anything you download before installing it.
 
 ## Automatic updates
 
-Installed copies of Alturex Planner check this repository's releases for updates. Update metadata
+Installed copies of Alturex Studio check this repository's releases for updates. Update metadata
 (`latest.json`) and every update bundle are cryptographically signed; the app verifies the
 signature against a key embedded at build time and will not install anything that fails
 verification. Updates are never installed without your explicit confirmation, and never while a
@@ -45,5 +45,5 @@ project save is pending.
 
 Copyright © Alturex. All rights reserved.
 
-The installers in this repository are provided for use of Alturex Planner by its intended users.
+The installers in this repository are provided for use of Alturex Studio by its intended users.
 No rights to the source code are granted. Redistribution of modified binaries is not permitted.

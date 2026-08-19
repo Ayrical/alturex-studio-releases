@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Alturex Planner — Downloads</title>
-<meta name="description" content="Download Alturex Planner, a local-first RF and network planning app for WISPs. macOS, Windows, and Linux builds.">
+<title>Alturex Studio — Downloads</title>
+<meta name="description" content="Download Alturex Studio, a local-first RF and network planning app for WISPs. macOS, Windows, and Linux builds.">
 <style>
   :root {
     color-scheme: light dark;
@@ -426,7 +426,7 @@
   <div class="wrap">
 
     <header class="hero">
-      <p class="eyebrow">Alturex Planner</p>
+      <p class="eyebrow">Alturex Studio</p>
       <h1>Download the internal alpha</h1>
       <p class="lede">A local-first RF and network planning app for WISPs — link budgets, terrain profiles, and topology, all on your desktop.</p>
 
@@ -448,7 +448,7 @@
     <footer>
       <span>© 2026 Alturex. Internal build — not for redistribution.</span>
       <span>
-        <a href="https://github.com/Ayrical/alturex-planner-releases/releases">All releases on GitHub</a>
+        <a href="https://github.com/Ayrical/alturex-studio-releases/releases">All releases on GitHub</a>
       </span>
     </footer>
 
@@ -458,8 +458,8 @@
 (function () {
   "use strict";
 
-  var API_URL = "https://api.github.com/repos/Ayrical/alturex-planner-releases/releases/latest";
-  var RELEASES_URL = "https://github.com/Ayrical/alturex-planner-releases/releases";
+  var API_URL = "https://api.github.com/repos/Ayrical/alturex-studio-releases/releases/latest";
+  var RELEASES_URL = "https://github.com/Ayrical/alturex-studio-releases/releases";
   var root = document.getElementById("release-root");
 
   function escapeHtml(str) {
@@ -647,7 +647,7 @@
     html += '<div class="dl-buttons">' + dlButton(groups.macDmg, "Download .dmg", "Apple Silicon (arm64)", true) + "</div>";
     html += '<ol class="steps">' +
       "<li>Open the downloaded <code>.dmg</code> file.</li>" +
-      "<li>Drag <strong>Alturex Planner</strong> into the Applications folder.</li>" +
+      "<li>Drag <strong>Alturex Studio</strong> into the Applications folder.</li>" +
       "</ol>";
     html += "</article>";
 
