@@ -14,16 +14,14 @@ this repository are not monitored — contact Alturex through your normal suppor
 
 ## Download
 
-No release has been published yet. The table below goes live with the first signed release.
-
 | Platform | Architecture | Package | Download |
 | --- | --- | --- | --- |
-| Windows 10/11 | x64 | `.msi` | _pending first release_ |
-| macOS 12+ | Apple silicon (arm64) | `.dmg` | _pending first release_ |
-| Linux | x64 | `.AppImage`, `.deb`, `.rpm` | _pending first release_ |
+| Windows 10/11 | x64 | `.exe`, `.msi` | [Installer (recommended)](https://github.com/Ayrical/alturex-studio-releases/releases/download/0.1.1/Alturex.Studio_0.1.1_x64-setup.exe) · [MSI](https://github.com/Ayrical/alturex-studio-releases/releases/download/0.1.1/Alturex.Studio_0.1.1_x64_en-US.msi) |
+| macOS 12+ | Apple silicon (arm64) | `.dmg` | [Download](https://github.com/Ayrical/alturex-studio-releases/releases/download/0.1.1/Alturex.Studio_0.1.1_aarch64.dmg) |
+| Linux | x64 | `.AppImage`, `.deb`, `.rpm` | [AppImage](https://github.com/Ayrical/alturex-studio-releases/releases/download/0.1.1/Alturex.Studio_0.1.1_amd64.AppImage) · [Debian / Ubuntu](https://github.com/Ayrical/alturex-studio-releases/releases/download/0.1.1/Alturex.Studio_0.1.1_amd64.deb) · [Fedora / RHEL](https://github.com/Ayrical/alturex-studio-releases/releases/download/0.1.1/Alturex.Studio-0.1.1-1.x86_64.rpm) |
 
-Each release includes SHA-256 checksums and Sigstore provenance for every installer. Verify the
-checksum of anything you download before installing it.
+See the [0.1.1 release](https://github.com/Ayrical/alturex-studio-releases/releases/tag/0.1.1)
+for release notes and supporting files.
 
 ### Platforms not currently supported
 
@@ -35,11 +33,8 @@ checksum of anything you download before installing it.
 
 ## Automatic updates
 
-Installed copies of Alturex Studio check this repository's releases for updates. Update metadata
-(`latest.json`) and every update bundle are cryptographically signed; the app verifies the
-signature against a key embedded at build time and will not install anything that fails
-verification. Updates are never installed without your explicit confirmation, and never while a
-project save is pending.
+Alturex Studio checks this repository for new releases and asks before installing an update.
+Updates are never installed while a project save is pending.
 
 ## License
 

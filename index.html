@@ -78,32 +78,6 @@
     padding: 0 24px;
   }
 
-  /* ---- alpha bar ---- */
-  .alpha-bar {
-    background: var(--bg-raised);
-    border-bottom: 1px solid var(--line);
-    font-size: 13.5px;
-    color: var(--ink-soft);
-  }
-  .alpha-bar .wrap {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-  }
-  .alpha-bar .dot {
-    width: 7px;
-    height: 7px;
-    border-radius: 50%;
-    background: var(--accent);
-    flex: none;
-  }
-  .alpha-bar strong {
-    color: var(--ink);
-    font-weight: 600;
-  }
-
   /* ---- hero ---- */
   header.hero {
     padding: 64px 0 8px;
@@ -416,18 +390,11 @@
 </head>
 <body>
 
-  <div class="alpha-bar">
-    <div class="wrap">
-      <span class="dot" aria-hidden="true"></span>
-      <span><strong>Internal alpha.</strong> Early build for the Alturex team — expect rough edges. Installed copies check for updates automatically.</span>
-    </div>
-  </div>
-
   <div class="wrap">
 
     <header class="hero">
       <p class="eyebrow">Alturex Studio</p>
-      <h1>Download the internal alpha</h1>
+      <h1>Download Alturex Studio</h1>
       <p class="lede">A local-first RF and network planning app for WISPs — link budgets, terrain profiles, and topology, all on your desktop.</p>
 
       <svg class="link-profile" viewBox="0 0 800 170" role="img" aria-label="Diagram of a wireless link profile: two towers with a clear line of sight over terrain">
@@ -446,7 +413,7 @@
     </main>
 
     <footer>
-      <span>© 2026 Alturex. Internal build — not for redistribution.</span>
+      <span>© 2026 Alturex. All rights reserved.</span>
       <span>
         <a href="https://github.com/Ayrical/alturex-studio-releases/releases">All releases on GitHub</a>
       </span>
@@ -515,6 +482,11 @@
     flushList();
     flushPara();
     return html;
+  }
+
+  function notesForDownloadsPage(body) {
+    var marker = String(body).match(/^##\s+What(?:'|’)?s new\s*$/im);
+    return marker ? String(body).slice(marker.index) : body;
   }
 
   function boldify(str) {
@@ -624,7 +596,7 @@
     var groups = classifyAssets(release.assets);
     var version = release.name || release.tag_name || "Untitled release";
     var date = formatDate(release.published_at || release.created_at);
-    var notesHtml = renderNotes(release.body || "");
+    var notesHtml = renderNotes(notesForDownloadsPage(release.body || ""));
 
     var html = "";
 
@@ -643,7 +615,7 @@
     // macOS
     html += '<article class="os-card">';
     html += "<h3>" + osIcon("mac") + "macOS</h3>";
-    html += '<p class="os-sub">Apple Silicon · signed &amp; notarized</p>';
+    html += '<p class="os-sub">macOS 12+ · Apple Silicon</p>';
     html += '<div class="dl-buttons">' + dlButton(groups.macDmg, "Download .dmg", "Apple Silicon (arm64)", true) + "</div>";
     html += '<ol class="steps">' +
       "<li>Open the downloaded <code>.dmg</code> file.</li>" +
@@ -661,7 +633,7 @@
       "</div>";
     html += '<ol class="steps">' +
       "<li>Run the downloaded installer.</li>" +
-      '<li>SmartScreen may warn before you run it.<span class="note">Alpha builds use an interim signing certificate — this warning is expected during the internal alpha.</span></li>' +
+      "<li>Follow the installer prompts to finish setup.</li>" +
       "</ol>";
     html += "</article>";
 
