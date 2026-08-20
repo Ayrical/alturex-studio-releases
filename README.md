@@ -23,6 +23,10 @@ this repository are not monitored — contact Alturex through your normal suppor
 See the [0.1.2 release](https://github.com/Ayrical/alturex-studio-releases/releases/tag/0.1.2)
 for release notes and supporting files.
 
+Windows setup works offline when the Microsoft Edge WebView2 Runtime is already installed. A fresh
+Windows machine without WebView2 needs network access during setup so the embedded bootstrapper can
+download the runtime; Alturex Studio works offline after installation.
+
 ### Platforms not currently supported
 
 | Platform | Architecture | Status |
