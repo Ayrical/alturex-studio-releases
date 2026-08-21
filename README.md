@@ -16,12 +16,16 @@ this repository are not monitored — contact Alturex through your normal suppor
 
 | Platform | Architecture | Package | Download |
 | --- | --- | --- | --- |
-| Windows 10/11 | x64 | `.exe`, `.msi` | [Installer (recommended)](https://github.com/Ayrical/alturex-studio-releases/releases/download/0.1.1/Alturex.Studio_0.1.1_x64-setup.exe) · [MSI](https://github.com/Ayrical/alturex-studio-releases/releases/download/0.1.1/Alturex.Studio_0.1.1_x64_en-US.msi) |
-| macOS 12+ | Apple silicon (arm64) | `.dmg` | [Download](https://github.com/Ayrical/alturex-studio-releases/releases/download/0.1.1/Alturex.Studio_0.1.1_aarch64.dmg) |
-| Linux | x64 | `.AppImage`, `.deb`, `.rpm` | [AppImage](https://github.com/Ayrical/alturex-studio-releases/releases/download/0.1.1/Alturex.Studio_0.1.1_amd64.AppImage) · [Debian / Ubuntu](https://github.com/Ayrical/alturex-studio-releases/releases/download/0.1.1/Alturex.Studio_0.1.1_amd64.deb) · [Fedora / RHEL](https://github.com/Ayrical/alturex-studio-releases/releases/download/0.1.1/Alturex.Studio-0.1.1-1.x86_64.rpm) |
+| Windows 10/11 | x64 | `.exe`, `.msi` | [Installer (recommended)](https://github.com/Ayrical/alturex-studio-releases/releases/download/0.1.2/Alturex.Studio_0.1.2_x64-setup.exe) · [MSI](https://github.com/Ayrical/alturex-studio-releases/releases/download/0.1.2/Alturex.Studio_0.1.2_x64_en-US.msi) |
+| macOS 12+ | Apple silicon (arm64) | `.dmg` | [Download](https://github.com/Ayrical/alturex-studio-releases/releases/download/0.1.2/Alturex.Studio_0.1.2_aarch64.dmg) |
+| Linux | x64 | `.AppImage`, `.deb`, `.rpm` | [AppImage](https://github.com/Ayrical/alturex-studio-releases/releases/download/0.1.2/Alturex.Studio_0.1.2_amd64.AppImage) · [Debian / Ubuntu](https://github.com/Ayrical/alturex-studio-releases/releases/download/0.1.2/Alturex.Studio_0.1.2_amd64.deb) · [Fedora / RHEL](https://github.com/Ayrical/alturex-studio-releases/releases/download/0.1.2/Alturex.Studio-0.1.2-1.x86_64.rpm) |
 
-See the [0.1.1 release](https://github.com/Ayrical/alturex-studio-releases/releases/tag/0.1.1)
+See the [0.1.2 release](https://github.com/Ayrical/alturex-studio-releases/releases/tag/0.1.2)
 for release notes and supporting files.
+
+Windows setup works offline when the Microsoft Edge WebView2 Runtime is already installed. A fresh
+Windows machine without WebView2 needs network access during setup so the embedded bootstrapper can
+download the runtime; Alturex Studio works offline after installation.
 
 ### Platforms not currently supported
 
