@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Alturex Studio — CLI, MCP and desktop downloads</title>
-<meta name="description" content="Prepare for standalone CLI/MCP 0.1.4 and download archived Alturex Studio 0.1.3 desktop installers.">
+<meta name="description" content="Download standalone CLI/MCP 0.1.4 and archived Alturex Studio 0.1.3 desktop installers.">
 <style>
   :root {
     color-scheme: light dark;
@@ -410,7 +410,7 @@
       <section class="release-notes deprecation-notice" aria-label="Desktop deprecation notice">
         <h2>Desktop deprecated</h2>
         <p><strong>The desktop app is frozen at 0.1.3. There will be no 0.1.4 desktop release.</strong> Existing installers remain available below.</p>
-        <p>The CLI and local MCP server remain supported. Hosted Studio has dev and staging deployments; production is not deployed. Cloud commands need an operator-provided server URL.</p>
+        <p>The CLI and local MCP server remain supported. Hosted Studio is undergoing production qualification. Cloud commands need an operator-provided server URL.</p>
       </section>
 
       <svg class="link-profile" viewBox="0 0 800 170" role="img" aria-label="Diagram of a wireless link profile: two towers with a clear line of sight over terrain">
@@ -427,7 +427,7 @@
     <main>
       <section class="cli-downloads" aria-labelledby="cli-title">
         <h2 id="cli-title">CLI and local MCP — 0.1.4</h2>
-        <p><strong>Not published yet.</strong> These prepared links become available only after <code>cli-v0.1.4</code> is published and verified. Local project files need no account. This is not a desktop 0.1.4 release.</p>
+        <p><code>cli-v0.1.4</code> is the first standalone CLI/MCP release. Local project files need no account. This is not a desktop 0.1.4 release.</p>
         <div class="table-scroll">
           <table>
             <thead><tr><th scope="col">Platform</th><th scope="col">Architecture</th><th scope="col">CLI</th><th scope="col">MCP extension</th></tr></thead>
@@ -438,7 +438,7 @@
             </tbody>
           </table>
         </div>
-        <p>Prepared <a href="https://github.com/Ayrical/alturex-studio-releases/releases/tag/cli-v0.1.4">release notes</a> and <a href="https://github.com/Ayrical/alturex-studio-releases/releases/download/cli-v0.1.4/SHA256SUMS.txt">SHA256SUMS.txt</a>. Select this tag explicitly; GitHub's generic latest release remains desktop 0.1.3.</p>
+        <p><a href="https://github.com/Ayrical/alturex-studio-releases/releases/tag/cli-v0.1.4">Release notes</a> and <a href="https://github.com/Ayrical/alturex-studio-releases/releases/download/cli-v0.1.4/SHA256SUMS.txt">SHA256SUMS.txt</a>. Select this tag explicitly; GitHub's generic latest release remains desktop 0.1.3.</p>
         <h3>Verify and install</h3>
         <p>The CLI requires <strong>Node.js 22.17.1 through 22.x</strong>, matching your architecture. Linux x64 requires glibc 2.35+. Native ITM and dataset helpers are included; Rust is not needed to install a release package.</p>
         <p>Download your package and <code>SHA256SUMS.txt</code> from the same release. Calculate its SHA-256 (substitute your downloaded filename):</p>

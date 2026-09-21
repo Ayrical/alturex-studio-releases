@@ -4,8 +4,7 @@ Standalone CLI/MCP downloads and archived **Alturex Studio** desktop installers.
 
 **Desktop is deprecated and frozen. Version 0.1.3 is the final desktop release.**
 Existing installers and project files remain available; there will be no 0.1.4 desktop release.
-The CLI and local MCP server remain supported. Hosted Studio has dev and staging deployments;
-production is not deployed. Cloud commands need an operator-provided server URL.
+The CLI and local MCP server remain supported. Hosted Studio is undergoing production qualification. Cloud commands need an operator-provided server URL.
 
 This repository hosts the official Alturex Studio downloads and the update feed the installed
 app checks for new versions. For the final desktop build with per-platform install instructions, see the
@@ -16,11 +15,10 @@ This repository distributes release artifacts; it does not contain the applicati
 Licensing differs by artifact; see [License](#license). Issues and pull requests in this repository
 are not monitored — contact Alturex through your normal support channel.
 
-## CLI and local MCP — 0.1.4 (not published yet)
+## CLI and local MCP — 0.1.4
 
-**These are prepared links for the first standalone release. They become available only after
-`cli-v0.1.4` is published and verified.** The local CLI and `alturex mcp` work with portable project
-files without an account. This is not a desktop 0.1.4 release.
+`cli-v0.1.4` is the first standalone CLI/MCP release. The local CLI and `alturex mcp` work with
+portable project files without an account. This is not a desktop 0.1.4 release.
 
 | Platform | Architecture | CLI | MCP extension |
 | --- | --- | --- | --- |
@@ -28,7 +26,7 @@ files without an account. This is not a desktop 0.1.4 release.
 | Linux | x64 · glibc 2.35+ | [CLI tarball](https://github.com/Ayrical/alturex-studio-releases/releases/download/cli-v0.1.4/alturex-cli-linux-x64.tgz) | [MCPB](https://github.com/Ayrical/alturex-studio-releases/releases/download/cli-v0.1.4/alturex-studio-0.1.4-linux-x64.mcpb) |
 | Windows | x64 | [CLI tarball](https://github.com/Ayrical/alturex-studio-releases/releases/download/cli-v0.1.4/alturex-cli-win32-x64.tgz) | [MCPB](https://github.com/Ayrical/alturex-studio-releases/releases/download/cli-v0.1.4/alturex-studio-0.1.4-win32-x64.mcpb) |
 
-Prepared [release notes](https://github.com/Ayrical/alturex-studio-releases/releases/tag/cli-v0.1.4) and
+[Release notes](https://github.com/Ayrical/alturex-studio-releases/releases/tag/cli-v0.1.4) and
 [SHA256SUMS.txt](https://github.com/Ayrical/alturex-studio-releases/releases/download/cli-v0.1.4/SHA256SUMS.txt).
 Always select `cli-v0.1.4` explicitly; GitHub's generic latest release remains desktop 0.1.3.
 
