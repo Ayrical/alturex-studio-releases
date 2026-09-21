@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Alturex Studio — Downloads</title>
-<meta name="description" content="Download Alturex Studio, a local-first RF and network planning app for WISPs. macOS, Windows, and Linux builds.">
+<title>Alturex Studio — Archived desktop downloads</title>
+<meta name="description" content="Archived Alturex Studio 0.1.3 installers for macOS, Windows, and Linux. The desktop app is deprecated; CLI and local MCP remain supported.">
 <style>
   :root {
     color-scheme: light dark;
@@ -180,6 +180,7 @@
     max-height: 260px;
     overflow-y: auto;
   }
+  .deprecation-notice { max-height: none; }
   .release-notes h2 {
     font-size: 12px;
     text-transform: uppercase;
@@ -394,8 +395,13 @@
 
     <header class="hero">
       <p class="eyebrow">Alturex Studio</p>
-      <h1>Download Alturex Studio</h1>
-      <p class="lede">A local-first RF and network planning app for WISPs — link budgets, terrain profiles, and topology, all on your desktop.</p>
+      <h1>Archived desktop downloads</h1>
+      <p class="lede">Alturex Studio 0.1.3 is the final desktop release for RF and network planning.</p>
+      <section class="release-notes deprecation-notice" aria-label="Desktop deprecation notice">
+        <h2>Desktop deprecated</h2>
+        <p><strong>The desktop app is frozen at 0.1.3. There will be no 0.1.4 desktop release.</strong> Existing installers remain available below.</p>
+        <p>The CLI and local MCP server remain supported. The graphical client is moving to a hosted web app, which is not deployed yet.</p>
+      </section>
 
       <svg class="link-profile" viewBox="0 0 800 170" role="img" aria-label="Diagram of a wireless link profile: two towers with a clear line of sight over terrain">
         <path class="fresnel" d="M92,58 Q400,24 708,58 Q400,92 92,58 Z"></path>
@@ -409,7 +415,7 @@
     </header>
 
     <main id="release-root" aria-live="polite">
-      <div class="loading-state">Checking the latest release…</div>
+      <div class="loading-state">Loading the final desktop release…</div>
     </main>
 
     <footer>
@@ -425,7 +431,7 @@
 (function () {
   "use strict";
 
-  var API_URL = "https://api.github.com/repos/Ayrical/alturex-studio-releases/releases/latest";
+  var API_URL = "https://api.github.com/repos/Ayrical/alturex-studio-releases/releases/tags/0.1.3";
   var RELEASES_URL = "https://github.com/Ayrical/alturex-studio-releases/releases";
   var root = document.getElementById("release-root");
 
@@ -585,7 +591,7 @@
     root.innerHTML =
       '<div class="empty-state">' +
         '<svg class="empty-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M9 10a3 3 0 1 1 4 2.8c-.7.3-1 .9-1 1.7"/><circle cx="12" cy="17.2" r=".4" fill="currentColor" stroke="none"/></svg>' +
-        "<h2>No builds published yet</h2>" +
+        "<h2>Downloads could not be loaded</h2>" +
         "<p>" + escapeHtml(message) + "</p>" +
         '<a class="cta" href="' + RELEASES_URL + '">View the Releases page</a>' +
       "</div>";
@@ -650,7 +656,7 @@
       "<li><strong>Ubuntu / Debian:</strong> double-clicking a <code>.deb</code> usually opens an archive viewer, so install it from a terminal: " +
         "<code>sudo apt install ./" + escapeHtml(groups.linuxDeb ? groups.linuxDeb.name : "Alturex.Studio_<version>_amd64.deb") + "</code> (run from your Downloads folder), then launch <strong>Alturex Studio</strong> from the app grid.</li>" +
       "<li><strong>Fedora / RHEL:</strong> <code>sudo dnf install ./" + escapeHtml(groups.linuxRpm ? groups.linuxRpm.name : "Alturex.Studio-<version>.x86_64.rpm") + "</code>.</li>" +
-      "<li><strong>AppImage:</strong> it will not run by double-click until it is executable — right-click → Properties → <em>Executable as Program</em> (or <code>chmod +x Alturex*.AppImage</code>), then run it. It will not appear in your app grid. In-app updates work for the AppImage; <code>.deb</code>/<code>.rpm</code> installs update by downloading the next version from this page — pick one format and stick with it.</li>" +
+      "<li><strong>AppImage:</strong> it will not run by double-click until it is executable — right-click → Properties → <em>Executable as Program</em> (or <code>chmod +x Alturex*.AppImage</code>), then run it. It will not appear in your app grid. Older installations can update to the final 0.1.3 release. No later desktop updates are planned.</li>" +
       "</ol>";
     html += "</article>";
 
@@ -676,13 +682,13 @@
       })
       .then(function (release) {
         if (!release || (release.draft && !release.assets)) {
-          renderEmptyState("We haven't cut a release yet. Check back soon, or watch the Releases page for the first build.");
+          renderEmptyState("The final desktop release is 0.1.3. Open the Releases page to download its archived installers.");
           return;
         }
         renderRelease(release);
       })
       .catch(function () {
-        renderEmptyState("We haven't cut a release yet. Check back soon, or watch the Releases page for the first build.");
+        renderEmptyState("The final desktop release is 0.1.3. Open the Releases page to download its archived installers.");
       });
   }
 
