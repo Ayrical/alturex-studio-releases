@@ -4,7 +4,10 @@ Standalone CLI/MCP downloads and archived **Alturex Studio** desktop installers.
 
 **Desktop is deprecated and frozen. Version 0.1.3 is the final desktop release.**
 Existing installers and project files remain available; there will be no 0.1.4 desktop release.
-The CLI and local MCP server remain supported. Hosted Studio is undergoing production qualification. Cloud commands need an operator-provided server URL.
+The CLI and local MCP server remain supported. Open [hosted Studio](https://studio.alturex.com/app)
+with an administrator-provided account. For CLI cloud access, run
+`alturex login --server https://studio.alturex.com --set-default` and approve the displayed code
+in the browser.
 
 This repository hosts the official Alturex Studio downloads and the update feed the installed
 app checks for new versions. For the final desktop build with per-platform install instructions, see the
