@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Alturex Studio — CLI, MCP and desktop downloads</title>
-<meta name="description" content="Download standalone CLI/MCP 0.1.4 and archived Alturex Studio 0.1.3 desktop installers.">
+<meta name="description" content="Download standalone CLI/MCP 0.1.5 and archived Alturex Studio 0.1.3 desktop installers.">
 <style>
   :root {
     color-scheme: light dark;
@@ -426,20 +426,30 @@
 
     <main>
       <section class="cli-downloads" aria-labelledby="cli-title">
-        <h2 id="cli-title">CLI and local MCP — 0.1.4</h2>
-        <p><code>cli-v0.1.4</code> is the first standalone CLI/MCP release. Local project files need no account. This is not a desktop 0.1.4 release.</p>
+        <h2 id="cli-title">CLI and local MCP — 0.1.5</h2>
+        <p>Local project files need no account. This is not a desktop 0.1.4 release.</p>
+        <h3>Install</h3>
+        <pre><code># macOS (Apple silicon) / Linux x64
+curl -fsSL https://studio.alturex.com/install.sh | sh</code></pre>
+        <pre><code># Windows x64 (PowerShell)
+irm https://studio.alturex.com/install.ps1 | iex</code></pre>
+        <p>Then sign in and check cloud access:</p>
+        <pre><code>alturex login
+alturex whoami
+alturex cloud projects</code></pre>
+        <p>Accounts for hosted Studio are provisioned by an administrator; local project files need no account. The installer verifies the release against <code>SHA256SUMS.txt</code> and installs a private, checksum-verified Node.js runtime, so no system Node or npm is required. Re-running the installer upgrades it in place; set <code>ALTUREX_VERSION</code> to pin a specific release. Read the <a href="https://studio.alturex.com/install.sh">installer source</a> first if you'd like.</p>
+        <h3>Manual install</h3>
         <div class="table-scroll">
           <table>
             <thead><tr><th scope="col">Platform</th><th scope="col">Architecture</th><th scope="col">CLI</th><th scope="col">MCP extension</th></tr></thead>
             <tbody>
-            <tr><th scope="row">macOS</th><td>Apple silicon (arm64)</td><td><a href="https://github.com/Ayrical/alturex-studio-releases/releases/download/cli-v0.1.4/alturex-cli-darwin-arm64.tgz">CLI tarball</a></td><td><a href="https://github.com/Ayrical/alturex-studio-releases/releases/download/cli-v0.1.4/alturex-studio-0.1.4-darwin-arm64.mcpb">MCPB</a></td></tr>
-            <tr><th scope="row">Linux</th><td>x64 · glibc 2.35+</td><td><a href="https://github.com/Ayrical/alturex-studio-releases/releases/download/cli-v0.1.4/alturex-cli-linux-x64.tgz">CLI tarball</a></td><td><a href="https://github.com/Ayrical/alturex-studio-releases/releases/download/cli-v0.1.4/alturex-studio-0.1.4-linux-x64.mcpb">MCPB</a></td></tr>
-            <tr><th scope="row">Windows</th><td>x64</td><td><a href="https://github.com/Ayrical/alturex-studio-releases/releases/download/cli-v0.1.4/alturex-cli-win32-x64.tgz">CLI tarball</a></td><td><a href="https://github.com/Ayrical/alturex-studio-releases/releases/download/cli-v0.1.4/alturex-studio-0.1.4-win32-x64.mcpb">MCPB</a></td></tr>
+            <tr><th scope="row">macOS</th><td>Apple silicon (arm64)</td><td><a href="https://github.com/Ayrical/alturex-studio-releases/releases/download/cli-v0.1.5/alturex-cli-darwin-arm64.tgz">CLI tarball</a></td><td><a href="https://github.com/Ayrical/alturex-studio-releases/releases/download/cli-v0.1.5/alturex-studio-0.1.5-darwin-arm64.mcpb">MCPB</a></td></tr>
+            <tr><th scope="row">Linux</th><td>x64 · glibc 2.35+</td><td><a href="https://github.com/Ayrical/alturex-studio-releases/releases/download/cli-v0.1.5/alturex-cli-linux-x64.tgz">CLI tarball</a></td><td><a href="https://github.com/Ayrical/alturex-studio-releases/releases/download/cli-v0.1.5/alturex-studio-0.1.5-linux-x64.mcpb">MCPB</a></td></tr>
+            <tr><th scope="row">Windows</th><td>x64</td><td><a href="https://github.com/Ayrical/alturex-studio-releases/releases/download/cli-v0.1.5/alturex-cli-win32-x64.tgz">CLI tarball</a></td><td><a href="https://github.com/Ayrical/alturex-studio-releases/releases/download/cli-v0.1.5/alturex-studio-0.1.5-win32-x64.mcpb">MCPB</a></td></tr>
             </tbody>
           </table>
         </div>
-        <p><a href="https://github.com/Ayrical/alturex-studio-releases/releases/tag/cli-v0.1.4">Release notes</a> and <a href="https://github.com/Ayrical/alturex-studio-releases/releases/download/cli-v0.1.4/SHA256SUMS.txt">SHA256SUMS.txt</a>. Select this tag explicitly; GitHub's generic latest release remains desktop 0.1.3.</p>
-        <h3>Verify and install</h3>
+        <p><a href="https://github.com/Ayrical/alturex-studio-releases/releases/tag/cli-v0.1.5">Release notes</a> and <a href="https://github.com/Ayrical/alturex-studio-releases/releases/download/cli-v0.1.5/SHA256SUMS.txt">SHA256SUMS.txt</a>. Select this tag explicitly; GitHub's generic latest release remains desktop 0.1.3.</p>
         <p>The CLI requires <strong>Node.js 22.17.1 through 22.x</strong>, matching your architecture. Linux x64 requires glibc 2.35+. Native ITM and dataset helpers are included; Rust is not needed to install a release package.</p>
         <p>Download your package and <code>SHA256SUMS.txt</code> from the same release. Calculate its SHA-256 (substitute your downloaded filename):</p>
         <pre><code># macOS
@@ -456,7 +466,7 @@ alturex mcp --help</code></pre>
         <p>MCPB needs a compatible MCP extension client and Node runtime; real-client installation can vary. The installed CLI provides local stdio MCP through <code>alturex mcp</code>.</p>
         <p>Helpers do not carry Apple Developer ID notarization or Windows Authenticode signatures. Managed-device policies may restrict execution.</p>
         <h3 id="artifact-licenses">Artifact licenses</h3>
-        <p>Each artifact follows its included license and third-party notices. Standalone CLI/MCP 0.1.4 includes an Apache License 2.0 <code>LICENSE</code> and separate NTIA ITM terms in <code>NTIA-ITM-LICENSE.md</code>. Archived desktop 0.1.3 retains its original accompanying terms; these new packages do not relicense it.</p>
+        <p>Each artifact follows its included license and third-party notices. Standalone CLI/MCP 0.1.5 includes an Apache License 2.0 <code>LICENSE</code> and separate NTIA ITM terms in <code>NTIA-ITM-LICENSE.md</code>. Archived desktop 0.1.3 retains its original accompanying terms; these new packages do not relicense it.</p>
       </section>
       <section aria-labelledby="desktop-title">
         <h2 id="desktop-title">Archived desktop — 0.1.3</h2>

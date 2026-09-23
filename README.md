@@ -18,24 +18,53 @@ This repository distributes release artifacts; it does not contain the applicati
 Licensing differs by artifact; see [License](#license). Issues and pull requests in this repository
 are not monitored — contact Alturex through your normal support channel.
 
-## CLI and local MCP — 0.1.4
+## CLI and local MCP — 0.1.5
 
-`cli-v0.1.4` is the first standalone CLI/MCP release. The local CLI and `alturex mcp` work with
-portable project files without an account. This is not a desktop 0.1.4 release.
+The local CLI and `alturex mcp` work with portable project files without an account. This is not a
+desktop 0.1.4 release.
+
+### Install
+
+macOS (Apple silicon) / Linux x64:
+
+```sh
+curl -fsSL https://studio.alturex.com/install.sh | sh
+```
+
+Windows x64 (PowerShell):
+
+```powershell
+irm https://studio.alturex.com/install.ps1 | iex
+```
+
+Then sign in and check cloud access:
+
+```sh
+alturex login
+alturex whoami
+alturex cloud projects
+```
+
+Accounts for hosted Studio are provisioned by an administrator; local project files need no
+account. The installer verifies the release against `SHA256SUMS.txt` and installs a private,
+checksum-verified Node.js runtime, so no system Node or npm is required. Re-running the installer
+upgrades it in place; set `ALTUREX_VERSION` to pin a specific release. Read the
+[installer source](https://studio.alturex.com/install.sh) first if you'd like.
+
+### Manual install
 
 | Platform | Architecture | CLI | MCP extension |
 | --- | --- | --- | --- |
-| macOS | Apple silicon (arm64) | [CLI tarball](https://github.com/Ayrical/alturex-studio-releases/releases/download/cli-v0.1.4/alturex-cli-darwin-arm64.tgz) | [MCPB](https://github.com/Ayrical/alturex-studio-releases/releases/download/cli-v0.1.4/alturex-studio-0.1.4-darwin-arm64.mcpb) |
-| Linux | x64 · glibc 2.35+ | [CLI tarball](https://github.com/Ayrical/alturex-studio-releases/releases/download/cli-v0.1.4/alturex-cli-linux-x64.tgz) | [MCPB](https://github.com/Ayrical/alturex-studio-releases/releases/download/cli-v0.1.4/alturex-studio-0.1.4-linux-x64.mcpb) |
-| Windows | x64 | [CLI tarball](https://github.com/Ayrical/alturex-studio-releases/releases/download/cli-v0.1.4/alturex-cli-win32-x64.tgz) | [MCPB](https://github.com/Ayrical/alturex-studio-releases/releases/download/cli-v0.1.4/alturex-studio-0.1.4-win32-x64.mcpb) |
+| macOS | Apple silicon (arm64) | [CLI tarball](https://github.com/Ayrical/alturex-studio-releases/releases/download/cli-v0.1.5/alturex-cli-darwin-arm64.tgz) | [MCPB](https://github.com/Ayrical/alturex-studio-releases/releases/download/cli-v0.1.5/alturex-studio-0.1.5-darwin-arm64.mcpb) |
+| Linux | x64 · glibc 2.35+ | [CLI tarball](https://github.com/Ayrical/alturex-studio-releases/releases/download/cli-v0.1.5/alturex-cli-linux-x64.tgz) | [MCPB](https://github.com/Ayrical/alturex-studio-releases/releases/download/cli-v0.1.5/alturex-studio-0.1.5-linux-x64.mcpb) |
+| Windows | x64 | [CLI tarball](https://github.com/Ayrical/alturex-studio-releases/releases/download/cli-v0.1.5/alturex-cli-win32-x64.tgz) | [MCPB](https://github.com/Ayrical/alturex-studio-releases/releases/download/cli-v0.1.5/alturex-studio-0.1.5-win32-x64.mcpb) |
 
-[Release notes](https://github.com/Ayrical/alturex-studio-releases/releases/tag/cli-v0.1.4) and
-[SHA256SUMS.txt](https://github.com/Ayrical/alturex-studio-releases/releases/download/cli-v0.1.4/SHA256SUMS.txt).
-Always select `cli-v0.1.4` explicitly; GitHub's generic latest release remains desktop 0.1.3.
+[Release notes](https://github.com/Ayrical/alturex-studio-releases/releases/tag/cli-v0.1.5) and
+[SHA256SUMS.txt](https://github.com/Ayrical/alturex-studio-releases/releases/download/cli-v0.1.5/SHA256SUMS.txt).
+Always select `cli-v0.1.5` explicitly; GitHub's generic latest release remains desktop 0.1.3.
 
-### Verify and install
-
-The CLI requires **Node.js 22.17.1 through 22.x**, matching the package architecture.
+The CLI requires **Node.js 22.17.1 through 22.x**, matching the package architecture. This applies
+only to the manual npm install path below; the installer above brings its own pinned runtime.
 Linux x64 requires glibc 2.35 or newer. Native ITM and dataset helpers are included; installing a
 release package does not require Rust or the application source tree.
 
@@ -101,7 +130,7 @@ planned. The archived updater feed remains available.
 ## License
 
 Each artifact is governed by its accompanying license and third-party notices. Standalone CLI/MCP
-0.1.4 packages include an Apache License 2.0 `LICENSE`; the bundled NTIA ITM code has its separate
+0.1.5 packages include an Apache License 2.0 `LICENSE`; the bundled NTIA ITM code has its separate
 `NTIA-ITM-LICENSE.md` disclaimer and terms. Consult those included texts for the applicable rights
 and obligations.
 
